@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Station | Resources</title>
+    <link rel="icon" href="./assets/page-icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-bg": "#121212",
+              "brand-card": "#1E1E1E",
+              "brand-text": "#E0E0E0",
+              "brand-gold": "#D4AF37",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-brand-bg text-brand-text font-sans">
+    <div
+      id="loader"
+      class="fixed inset-0 bg-brand-bg z-[100] flex justify-center items-center"
+    >
+      <div class="loader-spinner"></div>
+    </div>
+
+    <div
+      id="page-wrapper"
+      class="transition-transform duration-500 ease-in-out"
+    >
+      <div id="main-content" class="opacity-0">
+        <header class="fixed top-0 left-0 right-0 z-30 m-4">
+          <nav
+            class="container mx-auto px-6 py-4 rounded-2xl bg-black/30 backdrop-blur-xl border border-white/10 shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div>
+                  <h1 class="text-2xl font-bold text-white">
+                    <a href="index.html">Study Station</a>
+                  </h1>
+                  <p class="hidden md:block text-sm text-brand-text/80">
+                    Study Smart, Live Your Dreams
+                  </p>
+                </div>
+              </div>
+
+              <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a
+                  href="resources.html"
+                  class="nav-link text-brand-gold font-bold"
+                  >Resources</a
+                >
+                <a href="tutorials.html" class="nav-link">Tutorials</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="privacy.html" class="nav-link">Privacy Policy</a>
+                <a href="terms.html" class="nav-link">Terms & Conditions</a>
+              </div>
+
+              <div class="flex items-center">
+                <button
+                  id="mobile-menu-button"
+                  class="md:hidden text-white focus:outline-none mr-4"
+                >
+                  <i
+                    class="fas fa-bars text-2xl transition-transform duration-500"
+                  ></i>
+                </button>
+                <img
+                  src="./assets/studystation-logo.jpg"
+                  alt="Study Station Logo"
+                  class="w-12 h-12 rounded-full border-0 border-brand-gold/50"
+                />
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <main class="pt-32 container mx-auto px-4">
+          <section id="resources" class="py-16 animate-on-scroll">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">
+              Essential Learning Resources & Documentation
+            </h3>
+            <p
+              class="text-center text-lg text-brand-text/80 max-w-3xl mx-auto mb-12"
+            >
+              A curated list of the absolute best documentation, coding practice
+              platforms, and tech news sites essential for every developer.
+            </p>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6"
+            >
+              <a
+                href="https://developer.mozilla.org/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-firefox-browser text-4xl text-brand-text group-hover:text-red-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    MDN Web Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Documentation</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.w3schools.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-book-open text-4xl text-brand-text group-hover:text-green-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    W3Schools
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Tutorials</p>
+                </div>
+              </a>
+
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-github text-4xl text-brand-text group-hover:text-purple-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    GitHub
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Version Control</p>
+                </div>
+              </a>
+
+              <a
+                href="https://stackoverflow.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-stack-overflow text-4xl text-brand-text group-hover:text-orange-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Stack Overflow
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Q&A</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.freecodecamp.org/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-free-code-camp text-4xl text-brand-text group-hover:text-teal-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    FreeCodeCamp
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Curriculum</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.geeksforgeeks.org/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-code text-4xl text-brand-text group-hover:text-green-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    GeeksforGeeks
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">DS & Algo</p>
+                </div>
+              </a>
+
+              <a
+                href="https://leetcode.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-terminal text-4xl text-brand-text group-hover:text-yellow-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    LeetCode
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Coding Practice</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.hackerrank.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-laptop-code text-4xl text-brand-text group-hover:text-green-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    HackerRank
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Coding Challenges</p>
+                </div>
+              </a>
+
+              <a
+                href="https://codepen.io/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-codepen text-4xl text-brand-text group-hover:text-cyan-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Codepen
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Front-End Editor</p>
+                </div>
+              </a>
+
+              <a
+                href="https://css-tricks.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-css3-alt text-4xl text-brand-text group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    CSS-Tricks
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">CSS Tutorials</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.smashingmagazine.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-palette text-4xl text-brand-text group-hover:text-pink-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Smashing Magazine
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">
+                    Design & Dev Articles
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.tutorialspoint.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-graduation-cap text-4xl text-brand-text group-hover:text-amber-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Tutorialspoint
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Broad Tutorials</p>
+                </div>
+              </a>
+
+              <a
+                href="https://dev.to/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-dev text-4xl text-brand-text group-hover:text-white transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    DEV Community
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Tech Blogs</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.reddit.com/r/learnprogramming/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-reddit-alien text-4xl text-brand-text group-hover:text-red-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    r/learnprogramming
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Community</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.coursera.org/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-book text-4xl text-brand-text group-hover:text-blue-700 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Coursera
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Online Courses</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.edx.org/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-cube text-4xl text-brand-text group-hover:text-orange-700 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    edX
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">University Courses</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.kaggle.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-database text-4xl text-brand-text group-hover:text-sky-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Kaggle
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Data Science</p>
+                </div>
+              </a>
+
+              <a
+                href="https://towardsdatascience.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-medium text-4xl text-brand-text group-hover:text-gray-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Towards Data Science
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">DS Articles</p>
+                </div>
+              </a>
+
+              <a
+                href="https://dribbble.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-basketball-ball text-4xl text-brand-text group-hover:text-pink-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Dribbble
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">UI/UX Inspiration</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.behance.net/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-behance text-4xl text-brand-text group-hover:text-blue-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Behance
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Design Portfolios</p>
+                </div>
+              </a>
+
+              <a
+                href="https://news.ycombinator.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-y-combinator text-4xl text-brand-text group-hover:text-orange-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Hacker News
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Tech News</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.infoworld.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-newspaper text-4xl text-brand-text group-hover:text-yellow-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    InfoWorld
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">IT News</p>
+                </div>
+              </a>
+
+              <a
+                href="https://docs.python.org/3/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-python text-4xl text-brand-text group-hover:text-blue-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Python Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Language Docs</p>
+                </div>
+              </a>
+
+              <a
+                href="https://docs.oracle.com/en/java/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-java text-4xl text-brand-text group-hover:text-red-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Java Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Language Docs</p>
+                </div>
+              </a>
+
+              <a
+                href="https://cplusplus.com/reference/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-plus text-4xl text-brand-text group-hover:text-blue-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    C++ Reference
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Language Docs</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.digitalocean.com/community"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-water text-4xl text-brand-text group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    DigitalOcean Comm.
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Dev Tutorials</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.codewars.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-dragon text-4xl text-brand-text group-hover:text-red-700 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Codewars
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Code Katas</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.figma.com/community"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-vector-square text-4xl text-brand-text group-hover:text-purple-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Figma Community
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Design Resources</p>
+                </div>
+              </a>
+
+              <a
+                href="https://developers.cloudflare.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-cloud text-4xl text-brand-text group-hover:text-orange-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Cloudflare Dev
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Cloud/Network</p>
+                </div>
+              </a>
+
+              <a
+                href="https://alistapart.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-feather-alt text-4xl text-brand-text group-hover:text-pink-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    A List Apart
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Web Standards</p>
+                </div>
+              </a>
+
+              <a
+                href="https://react.dev/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-react text-4xl text-brand-text group-hover:text-sky-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    React Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">JS Library</p>
+                </div>
+              </a>
+
+              <a
+                href="https://vuejs.org/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-vuejs text-4xl text-brand-text group-hover:text-green-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Vue.js Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">JS Framework</p>
+                </div>
+              </a>
+
+              <a
+                href="https://angular.io/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-angular text-4xl text-brand-text group-hover:text-red-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Angular Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">JS Framework</p>
+                </div>
+              </a>
+
+              <a
+                href="https://nextjs.org/docs"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-bolt text-4xl text-brand-text group-hover:text-white transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Next.js Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">React Framework</p>
+                </div>
+              </a>
+
+              <a
+                href="https://tailwindcss.com/docs"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-wind text-4xl text-brand-text group-hover:text-cyan-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Tailwind CSS Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Utility CSS</p>
+                </div>
+              </a>
+
+              <a
+                href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-bootstrap text-4xl text-brand-text group-hover:text-purple-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Bootstrap Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">CSS Framework</p>
+                </div>
+              </a>
+
+              <a
+                href="https://nodejs.org/en/docs"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-node-js text-4xl text-brand-text group-hover:text-green-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Node.js Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">JS Runtime</p>
+                </div>
+              </a>
+
+              <a
+                href="https://expressjs.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-server text-4xl text-brand-text group-hover:text-gray-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Express.js
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Node Framework</p>
+                </div>
+              </a>
+
+              <a
+                href="https://docs.djangoproject.com/en/stable/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-leaf text-4xl text-brand-text group-hover:text-green-800 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Django Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Python Framework</p>
+                </div>
+              </a>
+
+              <a
+                href="https://rubyonrails.org/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-gem text-4xl text-brand-text group-hover:text-red-700 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Ruby on Rails
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Web Framework</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.postgresql.org/docs/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-database text-4xl text-brand-text group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    PostgreSQL Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">SQL Database</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.mongodb.com/docs/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-cube text-4xl text-brand-text group-hover:text-green-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    MongoDB Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">NoSQL Database</p>
+                </div>
+              </a>
+
+              <a
+                href="https://docs.aws.amazon.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-aws text-4xl text-brand-text group-hover:text-orange-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    AWS Documentation
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Cloud Services</p>
+                </div>
+              </a>
+
+              <a
+                href="https://cloud.google.com/docs"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-google text-4xl text-brand-text group-hover:text-red-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Google Cloud Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Cloud Services</p>
+                </div>
+              </a>
+
+              <a
+                href="https://material.io/design"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-layer-group text-4xl text-brand-text group-hover:text-blue-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Material Design
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Design System</p>
+                </div>
+              </a>
+
+              <a
+                href="https://carbondesignsystem.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-cogs text-4xl text-brand-text group-hover:text-gray-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    IBM Carbon Design
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Design System</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.nngroup.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-user-check text-4xl text-brand-text group-hover:text-pink-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    NN/g (Nielsen Norman)
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">UX Research</p>
+                </div>
+              </a>
+
+              <a
+                href="https://numpy.org/doc/stable/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-calculator text-4xl text-brand-text group-hover:text-blue-700 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    NumPy Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Python Math</p>
+                </div>
+              </a>
+
+              <a
+                href="https://pandas.pydata.org/docs/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-table text-4xl text-brand-text group-hover:text-orange-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Pandas Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Data Analysis</p>
+                </div>
+              </a>
+
+              <a
+                href="https://scikit-learn.org/stable/documentation.html"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-brain text-4xl text-brand-text group-hover:text-purple-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Scikit-Learn Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Machine Learning</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.codewars.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-dragon text-4xl text-brand-text group-hover:text-red-700 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Codewars
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Code Katas</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.testdome.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-clipboard-list text-4xl text-brand-text group-hover:text-teal-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    TestDome
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Skills Tests</p>
+                </div>
+              </a>
+
+              <a
+                href="https://exercism.org/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-dumbbell text-4xl text-brand-text group-hover:text-lime-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Exercism
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Mentored Practice</p>
+                </div>
+              </a>
+
+              <a
+                href="https://projecteuler.net/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-infinity text-4xl text-brand-text group-hover:text-indigo-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Project Euler
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Math Problems</p>
+                </div>
+              </a>
+
+              <a
+                href="https://roadmap.sh/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-route text-4xl text-brand-text group-hover:text-yellow-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Developer Roadmaps
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Learning Paths</p>
+                </div>
+              </a>
+
+              <a
+                href="https://docs.docker.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-docker text-4xl text-brand-text group-hover:text-blue-400 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Docker Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Containerization</p>
+                </div>
+              </a>
+
+              <a
+                href="https://kubernetes.io/docs/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-dharmachakra text-4xl text-brand-text group-hover:text-sky-700 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Kubernetes Docs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Orchestration</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.infoq.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-microphone-alt text-4xl text-brand-text group-hover:text-red-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    InfoQ
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Software Trends</p>
+                </div>
+              </a>
+
+              <a
+                href="https://devblogs.microsoft.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-microsoft text-4xl text-brand-text group-hover:text-blue-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Microsoft Dev Blogs
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Official Blogs</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.smashingmagazine.com/category/coding/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-laptop-code text-4xl text-brand-text group-hover:text-pink-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Smashing Mag (Coding)
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Coding Articles</p>
+                </div>
+              </a>
+
+              <a
+                href="https://web.dev/learn"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-google-chrome text-4xl text-brand-text group-hover:text-yellow-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    web.dev/learn
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Chrome Team Guides</p>
+                </div>
+              </a>
+
+              <a
+                href="https://swagger.io/docs/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-handshake text-4xl text-brand-text group-hover:text-green-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Swagger/OpenAPI
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">API Documentation</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.freecodecamp.org/news/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-rss-square text-4xl text-brand-text group-hover:text-teal-500 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    freeCodeCamp News
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">
+                    Development Articles
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.pluralsight.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-chalkboard-teacher text-4xl text-brand-text group-hover:text-red-700 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Pluralsight
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Video Courses</p>
+                </div>
+              </a>
+
+              <a
+                href="https://docs.microsoft.com/en-us/dotnet/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fas fa-code-branch text-4xl text-brand-text group-hover:text-purple-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    .NET Documentation
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">
+                    Microsoft Ecosystem
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="https://developer.android.com/"
+                target="_blank"
+                class="resource-card group"
+              >
+                <div
+                  class="p-4 flex flex-col items-center justify-center h-full"
+                >
+                  <i
+                    class="fab fa-android text-4xl text-brand-text group-hover:text-green-600 transition-colors"
+                  ></i>
+                  <h4 class="text-md font-semibold text-white mt-3 text-center">
+                    Android Developers
+                  </h4>
+                  <p class="text-brand-gold text-xs mt-1">Mobile Development</p>
+                </div>
+              </a>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 w-80 h-full bg-brand-card/95 backdrop-blur-md z-40 transform -translate-x-full transition-transform duration-500 ease-in-out md:hidden border-r border-white/10 shadow-2xl"
+    >
+      <div class="p-8 flex flex-col h-full">
+        <div
+          class="flex justify-between items-center mb-8 border-b border-brand-gold/30 pb-4"
+        >
+          <h3 class="text-3xl font-bold text-white">Navigation</h3>
+          <button id="close-menu-button" class="text-white focus:outline-none">
+            <i class="fas fa-times text-2xl hover:text-brand-gold"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-4 flex-grow">
+          <a
+            href="https://whatsapp.com/channel/0029Vaf77J0F6sn57H2hVN40"
+            class="mobile-nav-link text-lg font-semibold text-brand-gold hover:text-white"
+            target="_blank"
+          >
+            <i class="fas fa-graduation-cap mr-3 w-5"></i> Join The Channel
+          </a>
+          <a href="index.html" class="mobile-nav-link">
+            <i class="fas fa-home mr-3 w-5"></i> Home
+          </a>
+          <a href="courses.html" class="mobile-nav-link">
+            <i class="fas fa-book-open mr-3 w-5"></i> Courses
+          </a>
+          <a
+            href="resources.html"
+            class="mobile-nav-link text-brand-gold font-bold"
+          >
+            <i class="fas fa-microchip mr-3 w-5"></i> Resources
+          </a>
+          <a href="tutorials.html" class="mobile-nav-link">
+            <i class="fab fa-youtube mr-3 w-5"></i> Tutorials
+          </a>
+          <a href="about.html" class="mobile-nav-link">
+            <i class="fas fa-user-circle mr-3 w-5"></i> About Owner
+          </a>
+          <a href="contact.html" class="mobile-nav-link">
+            <i class="fas fa-envelope mr-3 w-5"></i> Contact
+          </a>
+
+          <div class="pt-4 border-t border-white/10 flex flex-col space-y-2">
+            <a href="privacy.html" class="mobile-nav-link">
+              <i class="fas fa-user-shield mr-3 w-5"></i> Privacy Policy
+            </a>
+            <a href="terms.html" class="mobile-nav-link">
+              <i class="fas fa-file-contract mr-3 w-5"></i> Terms & Conditions
+            </a>
+          </div>
+
+          <div
+            class="pt-8 mt-auto flex flex-col space-y-6 border-t border-white/10"
+          >
+            <h4 class="text-lg font-semibold text-white">Connect With Ubaid</h4>
+            <div class="flex justify-center gap-5">
+              <a
+                href="https://github.com/baid-ahmi"
+                class="social-icon text-2xl"
+                aria-label="GitHub"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/tiredofcaffeine"
+                class="social-icon text-2xl"
+                aria-label="Instagram"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/19kVFqjhpN/"
+                class="social-icon text-2xl"
+                aria-label="Facebook"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ubaid-ahmad-07423b2a8"
+                class="social-icon text-2xl"
+                aria-label="LinkedIn"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://discord.com/users/1419554765783961621"
+                class="social-icon text-2xl"
+                aria-label="Discord"
+                target="_blank"
+                ><i class="fab fa-discord"></i
+              ></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <footer class="bg-brand-card/50 mt-20 py-8 border-t border-white/10">
+      <div class="container mx-auto px-4 text-brand-text/70">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center">
+          <div class="col-span-1">
+            <h5 class="font-bold text-white mb-3">Quick Links</h5>
+            <ul class="space-y-1">
+              <li>
+                <a href="courses.html" class="hover:text-brand-gold">Courses</a>
+              </li>
+              <li>
+                <a href="resources.html" class="hover:text-brand-gold"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="tutorials.html" class="hover:text-brand-gold"
+                  >Tutorials</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-brand-gold"
+                  >About Owner</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-1">
+            <h5 class="font-bold text-white mb-3">Legal</h5>
+            <ul class="space-y-1">
+              <li>
+                <a href="terms.html" class="hover:text-brand-gold"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="privacy.html" class="hover:text-brand-gold"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-brand-gold">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-2">
+            <h5 class="font-bold text-white mb-3">Connect</h5>
+            <div class="flex justify-center gap-6">
+              <a
+                href="https://github.com/bugcurator"
+                class="social-icon"
+                aria-label="Ubaid Ahmad GitHub Profile"
+                target="_blank"
+                ><i class="fab fa-github fa-1x"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/tiredofcaffeine"
+                class="social-icon"
+                aria-label="Ubaid Ahmad Instagram Profile"
+                target="_blank"
+                ><i class="fab fa-instagram fa-1x"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/19kVFqjhpN/"
+                class="social-icon"
+                aria-label="Ubaid Ahmad Facebook Profile"
+                target="_blank"
+                ><i class="fab fa-facebook-f fa-1x"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ubaid-ahmad-07423b2a8"
+                class="social-icon"
+                aria-label="Ubaid Ahmad LinkedIn Profile"
+                target="_blank"
+                ><i class="fab fa-linkedin-in fa-1x"></i
+              ></a>
+              <a
+                href="https://discord.com/users/1419554765783961621"
+                class="social-icon"
+                aria-label="Ubaid Ahmad Discord Profile"
+                target="_blank"
+                ><i class="fab fa-discord fa-1x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center pt-4 border-t border-white/10">
+          <p>© 2024 Study Station. <br />Designed and Built by Ubaid Ahmad.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

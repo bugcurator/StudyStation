@@ -1,0 +1,161 @@
+/* Apply a background with a subtle fixed pattern for a parallax effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* (SVG background image data omitted for brevity, assume it's here) */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* ========== LOADER STYLES ========== */
+#loader {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loader-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-left-color: #d4af37; /* brand-gold */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========== SCROLL ANIMATION STYLES ========== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== HEARTBEAT ANIMATION STYLES ========== */
+.heartbeat-animation {
+  animation: heartbeat 1.5s infinite alternate;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  }
+}
+
+/* ========== COMPONENT & BUTTON STYLES ========== */
+.course-card {
+  background-color: #1e1e1e; /* brand-card */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.course-card img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Universal styles for all action buttons */
+.action-button {
+  background-color: #d4af37;
+  color: #121212;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  white-space: nowrap;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.action-button:hover:not(.heartbeat-animation) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  filter: brightness(1.1);
+}
+
+.social-icon {
+  transition: all 0.3s ease-in-out;
+  font-size: 1.5rem;
+}
+.social-icon:hover {
+  color: #d4af37;
+  transform: translateY(-4px);
+}
+
+/* Style for Navigation Links */
+.nav-link {
+  color: rgba(224, 224, 224, 0.8); /* brand-text/80 */
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #d4af37; /* brand-gold */
+}
+
+/* Mobile Navigation Link Styles */
+.mobile-nav-link {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #e0e0e0;
+  transition: color 0.2s;
+  display: block;
+  padding: 0.5rem 0;
+}
+.mobile-nav-link:hover {
+  color: #d4af37; /* brand-gold */
+}
+
+/* Resource Card Styling */
+.resource-card {
+  background-color: #1e1e1e; /* brand-card */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  min-height: 150px;
+}
+.resource-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.5); /* brand-gold border on hover */
+}
+
+/* Global Styles for Mobile Menu State */
+.menu-open {
+  overflow: hidden; /* Prevents background scrolling */
+}
+
+/* NEW: Content does not move right; the menu overlays it */
+#page-wrapper.menu-open {
+  transform: none;
+}

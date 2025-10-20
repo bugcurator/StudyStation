@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Station | Premium Courses</title>
+    <link rel="icon" href="./assets/page-icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-bg": "#121212",
+              "brand-card": "#1E1E1E",
+              "brand-text": "#E0E0E0",
+              "brand-gold": "#D4AF37",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-brand-bg text-brand-text font-sans">
+    <div
+      id="loader"
+      class="fixed inset-0 bg-brand-bg z-[100] flex justify-center items-center"
+    >
+      <div class="loader-spinner"></div>
+    </div>
+
+    <div
+      id="page-wrapper"
+      class="transition-transform duration-500 ease-in-out"
+    >
+      <div id="main-content" class="opacity-0">
+        <header class="fixed top-0 left-0 right-0 z-30 m-4">
+          <nav
+            class="container mx-auto px-6 py-4 rounded-2xl bg-black/30 backdrop-blur-xl border border-white/10 shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div>
+                  <h1 class="text-2xl font-bold text-white">
+                    <a href="index.html">Study Station</a>
+                  </h1>
+                  <p class="hidden md:block text-sm text-brand-text/80">
+                    Study Smart, Live Your Dreams
+                  </p>
+                </div>
+              </div>
+
+              <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a
+                  href="courses.html"
+                  class="nav-link text-brand-gold font-bold"
+                  >Courses</a
+                >
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="tutorials.html" class="nav-link">Tutorials</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="privacy.html" class="nav-link">Privacy Policy</a>
+                <a href="terms.html" class="nav-link">Terms & Conditions</a>
+              </div>
+
+              <div class="flex items-center">
+                <button
+                  id="mobile-menu-button"
+                  class="md:hidden text-white focus:outline-none mr-4"
+                >
+                  <i
+                    class="fas fa-bars text-2xl transition-transform duration-500"
+                  ></i>
+                </button>
+                <img
+                  src="./assets/studystation-logo.jpg"
+                  alt="Study Station Logo"
+                  class="w-12 h-12 rounded-full border-0 border-brand-gold/50"
+                />
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <main class="pt-32 container mx-auto px-4">
+          <section id="courses" class="py-16 animate-on-scroll">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">
+              Top Premium Courses (Free Download)
+            </h3>
+            <p
+              class="text-center text-lg text-brand-text/80 max-w-3xl mx-auto mb-12"
+            >
+              Top-tier premium courses, carefully selected for quality and
+              impact; available at absolutely no cost, only on StudyStation for
+              passionate learners worldwide. <br />
+              <span class="font-bold text-red-400"
+                >Links may expire; we update courses regularly based on
+                feedback.</span
+              >
+            </p>
+
+            <div
+              class="disclaimer-box animate-on-scroll mt-8 mb-16 max-w-4xl mx-auto p-6 rounded-xl border-l-4 border-yellow-500 bg-brand-card/70 shadow-xl"
+            >
+              <h4
+                class="text-xl font-bold text-yellow-400 mb-2 flex items-center"
+              >
+                <i class="fas fa-graduation-cap mr-3"></i> Full Courses &
+                Specializations
+              </h4>
+              <p class="text-sm text-brand-text/70 leading-relaxed">
+                This section is dedicated to listing
+                <b>high-class, comprehensive courses</b> that provide in-depth,
+                structured learning.
+              </p>
+              <p class="text-sm text-brand-text/70 mt-3 leading-relaxed">
+                <b>New courses are added regularly</b> when a
+                <b>free version</b>
+                of the content becomes publicly available.
+              </p>
+              <p class="text-sm text-brand-text/70 mt-3 leading-relaxed">
+                We prioritize the most relevant and high-quality educational
+                resources.
+              </p>
+            </div>
+
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+            >
+              <div class="course-card">
+                <img
+                  src="./assets/master-dsa-in-c++.jpg"
+                  alt="Master DSA in C++ by Apna College"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    Master DSA in C++
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Shradha Kapra</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★★★</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(5.0)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/1QfE-zKiHBdZEFpiYFCiHJa9mJdeu6Xa7"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="course-card">
+                <img
+                  src="./assets/alpha-coding-batch(3.0).png"
+                  alt="Master DSA in C++ by Apna College"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    ALPHA Coding Batch (3.0)
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Shradha Kapra</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★★★</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(5.0)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/1XjFMn6-XSAiwQDZAVjvOy8y0poU6cNrR"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="course-card">
+                <img
+                  src="./assets/build-ai-powered-apps.jpg"
+                  alt="Build AI Powered App by Mosh Hamdani"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    Build AI Powered App
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Mosh Hamdani</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★★☆</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(4.8)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/1rj_c7F9J-i_1ymzRIrU12SVALHmqz_ic?usp=sharing"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="course-card">
+                <img
+                  src="./assets/gen-ai advertising.jpg"
+                  alt="Gen AI Advertising by Rajeev Mehta"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    Gen AI Advertising
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Rajeev Mehta</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★☆☆</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(3.9)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/15kVjCxDEc8imFQ6VmH0iDZOQqzU8jt7j"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="course-card">
+                <img
+                  src="./assets/complete-web-dev+devOps-cohort.jpg"
+                  alt="Complete Web Dev + DevOps cohort by Harkirat Singh"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    Complete Web Dev + DevOps cohort
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Harkirat Singh</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★★☆</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(4.4)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/1GNeB6xmzW1c9VY30zyTNPqfAZ7gaSsDC?usp=sharing"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="course-card">
+                <img
+                  src="./assets/how-to-earn-from-social-media.jpg"
+                  alt="How to Earn from Social Media by Neeraj Walia"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    How to Earn from Social Media
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">
+                    Neeraj Walia (Ezsnippet)
+                  </p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★★★</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(4.6)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/1W_4UPedLWu_go-iB6l8wlV3aOhGiawPb?usp=drive_link"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="course-card">
+                <img
+                  src="./assets/master-designing-skills.jpg"
+                  alt="Master Designing Skills by Vaibhav"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    Master Designing Skills & Standout Creatively
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Vaibhav</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★☆☆</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(3.5)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/1Rz_cE9dq2Z38pEZzPblcuR0C_9YvwtVp?usp=sharing"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="course-card">
+                <img
+                  src="./assets/logo-desigining.jpg"
+                  alt="Logo Designing by Arsalan Ali"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    Logo Designing
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Arsalan Ali</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★★☆</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(4.4)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/1B-TdsbLxqYMTEJZfJMu9mcP-j5KWXnQC"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="course-card">
+                <img
+                  src="./assets/ai-mvp-builder.jpg"
+                  alt="AI MVP Builders by Prajwal Tomar"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    AI MVP Builders
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Prajwal Tomar</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★★☆</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(4.2)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/1w07wH7MO-WGA0ev35DBNZnNXOyPFz9Q4?usp=sharing"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="course-card">
+                <img
+                  src="./assets/art-of-web-design.jpg"
+                  alt="AI MVP Builders by Prajwal Tomar"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    Art of Web Design
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Matt Jumper</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★★★</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(4.6)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <a
+                      href="https://drive.google.com/drive/folders/1uKMW5yTCiK4AHr4t0vVaLWK0rkPD9ZPF?usp=sharing"
+                      class="action-button"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="course-card">
+                <img
+                  src="https://placehold.co/600x400/1E1E1E/E0E0E0?text=New+Course"
+                  alt="New Course Coming Soon"
+                  class="rounded-t-xl w-full h-48 object-cover"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-xl font-semibold text-white">
+                    Discover What's Next
+                  </h4>
+                  <p class="text-brand-text/70 mt-1">Announced Soon</p>
+                  <div class="flex items-center my-3 text-brand-gold">
+                    <span>★★★★★</span
+                    ><span class="ml-2 text-sm text-brand-text/70">(4.5)</span>
+                  </div>
+                  <div class="mt-auto flex justify-center">
+                    <button class="action-button">Coming Soon</button>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div
+                class="course-card mt-0.5 mb-0.5 flex justify-center items-center p-6 rounded-xl border-l-4 border-500 bg-brand-card/70 shadow-xl animate-on-scroll"
+              >
+                <i
+                  class="fas fa-clock mb-2 text-5xl"
+                  style="color: #d4af37"
+                ></i>
+                <h4
+                  class="text-xl font-bold text-yellow-400 mb-2 flex items-center"
+                  style="color: #d4af37"
+                >
+                  Upcoming Course
+                </h4>
+                <p
+                  class="text-sm text-center text-brand-text/70 leading-relaxed"
+                >
+                  New course will be uploaded soon after discovery and
+                  verification. Stay tuned for updates.
+                </p>
+              </div> -->
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 w-80 h-full bg-brand-card/95 backdrop-blur-md z-40 transform -translate-x-full transition-transform duration-500 ease-in-out md:hidden border-r border-white/10 shadow-2xl"
+    >
+      <div class="p-8 flex flex-col h-full">
+        <div
+          class="flex justify-between items-center mb-8 border-b border-brand-gold/30 pb-4"
+        >
+          <h3 class="text-3xl font-bold text-white">Navigation</h3>
+          <button id="close-menu-button" class="text-white focus:outline-none">
+            <i class="fas fa-times text-2xl hover:text-brand-gold"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-4 flex-grow">
+          <a
+            href="https://whatsapp.com/channel/0029Vaf77J0F6sn57H2hVN40"
+            class="mobile-nav-link text-lg font-semibold text-brand-gold hover:text-white"
+            target="_blank"
+          >
+            <i class="fas fa-graduation-cap mr-3 w-5"></i> Join The Channel
+          </a>
+          <a href="index.html" class="mobile-nav-link">
+            <i class="fas fa-home mr-3 w-5"></i> Home
+          </a>
+          <a
+            href="courses.html"
+            class="mobile-nav-link text-brand-gold font-bold"
+          >
+            <i class="fas fa-book-open mr-3 w-5"></i> Courses
+          </a>
+          <a href="resources.html" class="mobile-nav-link">
+            <i class="fas fa-microchip mr-3 w-5"></i> Resources
+          </a>
+          <a href="tutorials.html" class="mobile-nav-link">
+            <i class="fab fa-youtube mr-3 w-5"></i> Tutorials
+          </a>
+          <a href="about.html" class="mobile-nav-link">
+            <i class="fas fa-user-circle mr-3 w-5"></i> About Owner
+          </a>
+          <a href="contact.html" class="mobile-nav-link">
+            <i class="fas fa-envelope mr-3 w-5"></i> Contact
+          </a>
+
+          <div class="pt-4 border-t border-white/10 flex flex-col space-y-2">
+            <a href="privacy.html" class="mobile-nav-link">
+              <i class="fas fa-user-shield mr-3 w-5"></i> Privacy Policy
+            </a>
+            <a href="terms.html" class="mobile-nav-link">
+              <i class="fas fa-file-contract mr-3 w-5"></i> Terms & Conditions
+            </a>
+          </div>
+
+          <div
+            class="pt-8 mt-auto flex flex-col space-y-6 border-t border-white/10"
+          >
+            <h4 class="text-lg font-semibold text-white">Connect With Ubaid</h4>
+            <div class="flex justify-center gap-5">
+              <a
+                href="https://github.com/baid-ahmi"
+                class="social-icon text-2xl"
+                aria-label="GitHub"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/tiredofcaffeine"
+                class="social-icon text-2xl"
+                aria-label="Instagram"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/19kVFqjhpN/"
+                class="social-icon text-2xl"
+                aria-label="Facebook"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ubaid-ahmad-07423b2a8"
+                class="social-icon text-2xl"
+                aria-label="LinkedIn"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://discord.com/users/1419554765783961621"
+                class="social-icon text-2xl"
+                aria-label="Discord"
+                target="_blank"
+                ><i class="fab fa-discord"></i
+              ></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <footer class="bg-brand-card/50 mt-20 py-8 border-t border-white/10">
+      <div class="container mx-auto px-4 text-brand-text/70">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center">
+          <div class="col-span-1">
+            <h5 class="font-bold text-white mb-3">Quick Links</h5>
+            <ul class="space-y-1">
+              <li>
+                <a href="courses.html" class="hover:text-brand-gold">Courses</a>
+              </li>
+              <li>
+                <a href="resources.html" class="hover:text-brand-gold"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="tutorials.html" class="hover:text-brand-gold"
+                  >Tutorials</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-brand-gold"
+                  >About Owner</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-1">
+            <h5 class="font-bold text-white mb-3">Legal</h5>
+            <ul class="space-y-1">
+              <li>
+                <a href="terms.html" class="hover:text-brand-gold"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="privacy.html" class="hover:text-brand-gold"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-brand-gold">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-2">
+            <h5 class="font-bold text-white mb-3">Connect</h5>
+            <div class="flex justify-center gap-6">
+              <a
+                href="https://github.com/bugcurator"
+                class="social-icon"
+                aria-label="Ubaid Ahmad GitHub Profile"
+                target="_blank"
+                ><i class="fab fa-github fa-1x"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/tiredofcaffeine"
+                class="social-icon"
+                aria-label="Ubaid Ahmad Instagram Profile"
+                target="_blank"
+                ><i class="fab fa-instagram fa-1x"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/19kVFqjhpN/"
+                class="social-icon"
+                aria-label="Ubaid Ahmad Facebook Profile"
+                target="_blank"
+                ><i class="fab fa-facebook-f fa-1x"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ubaid-ahmad-07423b2a8"
+                class="social-icon"
+                aria-label="Ubaid Ahmad LinkedIn Profile"
+                target="_blank"
+                ><i class="fab fa-linkedin-in fa-1x"></i
+              ></a>
+              <a
+                href="https://discord.com/users/1419554765783961621"
+                class="social-icon"
+                aria-label="Ubaid Ahmad Discord Profile"
+                target="_blank"
+                ><i class="fab fa-discord fa-1x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center pt-4 border-t border-white/10">
+          <p>© 2024 Study Station. <br />Designed and Built by Ubaid Ahmad.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

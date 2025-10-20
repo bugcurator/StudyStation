@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Station | Home</title>
+    <link rel="icon" href="./assets/page-icon.png" />
+    <meta
+      name="description"
+      content="Access hundreds of premium courses and curated tutorials in Web Development, Data Science, and Design for free. Unlock your potential with Study Station today."
+    />
+    <meta
+      name="keywords"
+      content="free premium courses, web development, data science, machine learning, ui/ux design, online tutorials, free education, Study Station"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-bg": "#121212",
+              "brand-card": "#1E1E1E",
+              "brand-text": "#E0E0E0",
+              "brand-gold": "#D4AF37",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-brand-bg text-brand-text font-sans">
+    <div
+      id="loader"
+      class="fixed inset-0 bg-brand-bg z-[100] flex justify-center items-center"
+    >
+      <div class="loader-spinner"></div>
+    </div>
+
+    <div
+      id="page-wrapper"
+      class="transition-transform duration-500 ease-in-out"
+    >
+      <div id="main-content" class="opacity-0">
+        <header class="fixed top-0 left-0 right-0 z-30 m-4">
+          <nav
+            class="container mx-auto px-6 py-4 rounded-2xl bg-black/30 backdrop-blur-xl border border-white/10 shadow-lg transition-all duration-300"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-6">
+                <div>
+                  <h1 class="text-2xl font-bold text-white">
+                    <a href="index.html">Study Station</a>
+                  </h1>
+                  <p class="hidden md:block text-sm text-brand-text/80">
+                    Study Smart, Live Your Dreams
+                  </p>
+                </div>
+              </div>
+
+              <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link text-brand-gold font-bold"
+                  >Home</a
+                >
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="tutorials.html" class="nav-link">Tutorials</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="privacy.html" class="nav-link">Privacy Policy</a>
+                <a href="terms.html" class="nav-link">Terms & Conditions</a>
+              </div>
+
+              <div class="flex items-center">
+                <button
+                  id="mobile-menu-button"
+                  class="md:hidden text-white focus:outline-none mr-4"
+                >
+                  <i
+                    class="fas fa-bars text-2xl transition-transform duration-500"
+                  ></i>
+                </button>
+                <img
+                  src="./assets/studystation-logo.jpg"
+                  alt="Study Station Logo"
+                  class="w-12 h-12 rounded-full border-0 border-brand-gold/50"
+                />
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <main class="pt-32 container mx-auto px-4">
+          <section class="text-center py-20 animate-on-scroll">
+            <h2
+              class="text-5xl md:text-7xl font-bold text-white tracking-tight"
+            >
+              Unlock Your Potential with Free Premium Courses
+            </h2>
+            <p
+              class="mt-4 text-lg md:text-xl text-brand-text/80 max-w-3xl mx-auto"
+            >
+              Access hundreds of premium courses and curated tutorials from
+              industry experts, absolutely free. Start your career in Web
+              Development, Data Science, or UI/UX Design today!
+            </p>
+            <a
+              href="https://whatsapp.com/channel/0029Vaf77J0F6sn57H2hVN40"
+              class="action-button heartbeat-animation mt-8 inline-block px-8 py-3"
+              target="_blank"
+              >Join the Channel</a
+            >
+          </section>
+
+          <div
+            class="disclaimer-box animate-on-scroll mt-8 mb-16 max-w-4xl mx-auto p-6 rounded-xl border-l-4 border-red-500 bg-brand-card/70 shadow-xl"
+          >
+            <h4 class="text-xl font-bold text-red-400 mb-2 flex items-center">
+              <i class="fas fa-exclamation-triangle mr-3"></i> Important
+              Disclaimer
+            </h4>
+            <p class="text-sm text-brand-text/70 leading-relaxed">
+              Study Station only curates and shares links to learning resources.
+              We
+              <b>don't own or host</b> any third-party content.
+            </p>
+            <p class="text-sm text-brand-text/70 mt-3 leading-relaxed">
+              By using these links, you accept full responsibility for your
+              actions. Study Station and its owner, Ubaid Ahmad,
+              <b>aren't liable</b> for any loss, issues, or harm caused by
+              external sites.
+            </p>
+            <p class="text-sm text-brand-text/70 mt-3 leading-relaxed">
+              Some links may expire or change over time; we'll do our best to
+              keep everything updated. <b>Your feedback keeps us improving.</b>
+            </p>
+          </div>
+
+        
+
+         
+          <section class="py-10 animate-on-scroll">
+            <h3 class="text-4xl font-bold text-center text-white mb-12">
+              Explore Our Stations
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <a
+                href="courses.html"
+                class="resource-card animate-on-scroll hover:shadow-xl group"
+              >
+                <img
+                  src="./assets/card-courses.jpg"
+                  alt="Image of open books and code on a laptop"
+                  class="w-full h-40 object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-2xl font-bold text-brand-gold mb-2">
+                    <i class="fas fa-book-open mr-2"></i> Courses
+                  </h4>
+                  <p class="text-brand-text/80 text-sm mb-4 flex-grow">
+                    Dive into our extensive library of free premium courses for
+                    Web Dev, Data Science, and Design. Your next skill is
+                    waiting!
+                  </p>
+                  <button
+                    class="action-button w-full text-sm mt-auto"
+                    onclick="window.location.href='courses.html'; return false;"
+                  >
+                    Start Learning
+                  </button>
+                </div>
+              </a>
+
+              <a
+                href="resources.html"
+                class="resource-card animate-on-scroll hover:shadow-xl group"
+              >
+                <img
+                  src="./assets/card-resources.jpg"
+                  alt="Image of a graphic showing technical tools"
+                  class="w-full h-40 object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-2xl font-bold text-brand-gold mb-2">
+                    <i class="fas fa-microchip mr-2"></i> Resources
+                  </h4>
+                  <p class="text-brand-text/80 text-sm mb-4 flex-grow">
+                    Find valuable tools, articles, templates, and essential
+                    links to support your learning journey and projects.
+                  </p>
+                  <button
+                    class="action-button w-full text-sm mt-auto"
+                    onclick="window.location.href='resources.html'; return false;"
+                  >
+                    View Tools
+                  </button>
+                </div>
+              </a>
+
+              <a
+                href="tutorials.html"
+                class="resource-card animate-on-scroll hover:shadow-xl group"
+              >
+                <img
+                  src="./assets/card-tutorials.jpg"
+                  alt="Image of a video player interface"
+                  class="w-full h-40 object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-2xl font-bold text-brand-gold mb-2">
+                    <i class="fab fa-youtube mr-2"></i> Tutorials
+                  </h4>
+                  <p class="text-brand-text/80 text-sm mb-4 flex-grow">
+                    Access curated video tutorials and walkthroughs for
+                    practical, hands-on learning from experts.
+                  </p>
+                  <button
+                    class="action-button w-full text-sm mt-auto"
+                    onclick="window.location.href='tutorials.html'; return false;"
+                  >
+                    Watch Now
+                  </button>
+                </div>
+              </a>
+
+              <a
+                href="about.html"
+                class="resource-card animate-on-scroll hover:shadow-xl group"
+              >
+                <img
+                  src="./assets/card-about.jpg"
+                  alt="Image of a person at a desk working"
+                  class="w-full h-40 object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-2xl font-bold text-brand-gold mb-2">
+                    <i class="fas fa-user-circle mr-2"></i> About Owner
+                  </h4>
+                  <p class="text-brand-text/80 text-sm mb-4 flex-grow">
+                    Learn about Ubaid Ahmad, the person behind Study Station,
+                    his mission, and his background in tech.
+                  </p>
+                  <button
+                    class="action-button w-full text-sm mt-auto"
+                    onclick="window.location.href='about.html'; return false;"
+                  >
+                    Get to Know Us
+                  </button>
+                </div>
+              </a>
+
+              <a
+                href="contact.html"
+                class="resource-card animate-on-scroll hover:shadow-xl group"
+              >
+                <img
+                  src="./assets/card-contact2.jpg"
+                  alt="Image of a chat bubble icon"
+                  class="w-full h-40 object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-2xl font-bold text-brand-gold mb-2">
+                    <i class="fas fa-envelope mr-2"></i> Contact
+                  </h4>
+                  <p class="text-brand-text/80 text-sm mb-4 flex-grow">
+                    Have questions, suggestions, or need support? Reach out to
+                    us directly through our contact page.
+                  </p>
+                  <button
+                    class="action-button w-full text-sm mt-auto"
+                    onclick="window.location.href='contact.html'; return false;"
+                  >
+                    Say Hello
+                  </button>
+                </div>
+              </a>
+
+              <a
+                href="privacy.html"
+                class="resource-card animate-on-scroll hover:shadow-xl group"
+              >
+                <img
+                  src="./assets/card-policy.jpg"
+                  alt="Image of a legal document icon"
+                  class="w-full h-40 object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+                <div class="p-6 flex flex-col flex-grow">
+                  <h4 class="text-2xl font-bold text-brand-gold mb-2">
+                    <i class="fas fa-user-shield mr-2"></i> Policy & Terms
+                  </h4>
+                  <p class="text-brand-text/80 text-sm mb-4 flex-grow">
+                    Read our Privacy Policy and Terms & Conditions to understand
+                    how we operate.
+                  </p>
+                  <button
+                    class="action-button w-full text-sm mt-auto"
+                    onclick="window.location.href='privacy.html'; return false;"
+                  >
+                    Read Details
+                  </button>
+                </div>
+              </a>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 w-80 h-full bg-brand-card/95 backdrop-blur-md z-40 transform -translate-x-full transition-transform duration-500 ease-in-out md:hidden border-r border-white/10 shadow-2xl"
+    >
+      <div class="p-8 flex flex-col h-full">
+        <div
+          class="flex justify-between items-center mb-8 border-b border-brand-gold/30 pb-4"
+        >
+          <h3 class="text-3xl font-bold text-white">Navigation</h3>
+          <button id="close-menu-button" class="text-white focus:outline-none">
+            <i class="fas fa-times text-2xl hover:text-brand-gold"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-4 flex-grow">
+          <a
+            href="https://whatsapp.com/channel/0029Vaf77J0F6sn57H2hVN40"
+            class="mobile-nav-link text-lg font-semibold text-brand-gold hover:text-white"
+            target="_blank"
+          >
+            <i class="fas fa-graduation-cap mr-3 w-5"></i> Join The Channel
+          </a>
+          <a
+            href="index.html"
+            class="mobile-nav-link text-brand-gold font-bold"
+          >
+            <i class="fas fa-home mr-3 w-5"></i> Home
+          </a>
+          <a href="courses.html" class="mobile-nav-link">
+            <i class="fas fa-book-open mr-3 w-5"></i> Courses
+          </a>
+          <a href="resources.html" class="mobile-nav-link">
+            <i class="fas fa-microchip mr-3 w-5"></i> Resources
+          </a>
+          <a href="tutorials.html" class="mobile-nav-link">
+            <i class="fab fa-youtube mr-3 w-5"></i> Tutorials
+          </a>
+          <a href="about.html" class="mobile-nav-link">
+            <i class="fas fa-user-circle mr-3 w-5"></i> About Owner
+          </a>
+          <a href="contact.html" class="mobile-nav-link">
+            <i class="fas fa-envelope mr-3 w-5"></i> Contact
+          </a>
+
+          <div class="pt-4 border-t border-white/10 flex flex-col space-y-2">
+            <a href="privacy.html" class="mobile-nav-link">
+              <i class="fas fa-user-shield mr-3 w-5"></i> Privacy Policy
+            </a>
+            <a href="terms.html" class="mobile-nav-link">
+              <i class="fas fa-file-contract mr-3 w-5"></i> Terms & Conditions
+            </a>
+          </div>
+
+          <div
+            class="pt-8 mt-auto flex flex-col space-y-6 border-t border-white/10"
+          >
+            <h4 class="text-lg font-semibold text-white">Connect With Ubaid</h4>
+            <div class="flex justify-center gap-5">
+              <a
+                href="https://github.com/baid-ahmi"
+                class="social-icon text-2xl"
+                aria-label="GitHub"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/tiredofcaffeine"
+                class="social-icon text-2xl"
+                aria-label="Instagram"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/19kVFqjhpN/"
+                class="social-icon text-2xl"
+                aria-label="Facebook"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ubaid-ahmad-07423b2a8"
+                class="social-icon text-2xl"
+                aria-label="LinkedIn"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://discord.com/users/1419554765783961621"
+                class="social-icon text-2xl"
+                aria-label="Discord"
+                target="_blank"
+                ><i class="fab fa-discord"></i
+              ></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <footer class="bg-brand-card/50 mt-20 py-8 border-t border-white/10">
+      <div class="container mx-auto px-4 text-brand-text/70">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center">
+          <div class="col-span-1">
+            <h5 class="font-bold text-white mb-3">Quick Links</h5>
+            <ul class="space-y-1">
+              <li>
+                <a href="courses.html" class="hover:text-brand-gold">Courses</a>
+              </li>
+              <li>
+                <a href="resources.html" class="hover:text-brand-gold"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="tutorials.html" class="hover:text-brand-gold"
+                  >Tutorials</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-brand-gold"
+                  >About Owner</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-1">
+            <h5 class="font-bold text-white mb-3">Legal</h5>
+            <ul class="space-y-1">
+              <li>
+                <a href="terms.html" class="hover:text-brand-gold"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="privacy.html" class="hover:text-brand-gold"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-brand-gold">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-2">
+            <h5 class="font-bold text-white mb-3">Connect</h5>
+            <div class="flex justify-center gap-6">
+              <a
+                href="https://github.com/bugcurator"
+                class="social-icon"
+                aria-label="Ubaid Ahmad GitHub Profile"
+                target="_blank"
+                ><i class="fab fa-github fa-1x"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/tiredofcaffeine"
+                class="social-icon"
+                aria-label="Ubaid Ahmad Instagram Profile"
+                target="_blank"
+                ><i class="fab fa-instagram fa-1x"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/19kVFqjhpN/"
+                class="social-icon"
+                aria-label="Ubaid Ahmad Facebook Profile"
+                target="_blank"
+                ><i class="fab fa-facebook-f fa-1x"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ubaid-ahmad-07423b2a8"
+                class="social-icon"
+                aria-label="Ubaid Ahmad LinkedIn Profile"
+                target="_blank"
+                ><i class="fab fa-linkedin-in fa-1x"></i
+              ></a>
+              <a
+                href="https://discord.com/users/1419554765783961621"
+                class="social-icon"
+                aria-label="Ubaid Ahmad Discord Profile"
+                target="_blank"
+                ><i class="fab fa-discord fa-1x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center pt-4 border-t border-white/10">
+          <p>© 2024 Study Station. <br />Designed and Built by Ubaid Ahmad.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
