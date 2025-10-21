@@ -4,16 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageWrapper = document.getElementById("page-wrapper");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  // Elements for control
-  const menuButton = document.getElementById("mobile-menu-button"); // Hamburger (Open)
-  const closeMenuButton = document.getElementById("close-menu-button"); // Cross (Close)
+  const menuButton = document.getElementById("mobile-menu-button");
+  const closeMenuButton = document.getElementById("close-menu-button");
 
-  // Select all links that should close the menu (mobile links only)
   const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
-  const loaderDuration = 800; // Use a fixed duration for consistency
+  const loaderDuration = 800;
 
-  // Function to close the menu
   const closeMenu = () => {
     document.body.classList.remove("menu-open");
     pageWrapper.classList.remove("menu-open");
@@ -21,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "auto";
   };
 
-  // Function to open the menu
   const openMenu = () => {
     document.body.classList.add("menu-open");
     pageWrapper.classList.add("menu-open");
@@ -31,34 +27,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ========== MENU LISTENERS ==========
 
-  // 1. Hamburger button (Open)
   if (menuButton) {
     menuButton.addEventListener("click", openMenu);
   }
 
-  // 2. Cross button (Close)
   if (closeMenuButton) {
     closeMenuButton.addEventListener("click", closeMenu);
   }
 
-  // 3. Auto-close when a mobile link is clicked (important for navigating away)
   mobileNavLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      // Check if the mobile menu is open
       if (mobileMenu.classList.contains("translate-x-0")) {
-        // Add a slight delay for smooth transition
         setTimeout(closeMenu, 10);
       }
     });
   });
 
-  // 4. Close when clicking anywhere outside the menu panel
   document.addEventListener("click", (event) => {
     const isMenuOpen = mobileMenu.classList.contains("translate-x-0");
     const isClickInsideMenu = mobileMenu.contains(event.target);
     const isClickOnOpenButton = menuButton.contains(event.target);
 
-    // If menu is open AND click is NOT inside the menu AND click is NOT on the open button, close the menu.
     if (isMenuOpen && !isClickInsideMenu && !isClickOnOpenButton) {
       closeMenu();
     }
@@ -70,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       loader.style.opacity = "0";
       setTimeout(() => {
         loader.style.display = "none";
-        document.body.style.overflow = "auto"; // Re-enable scroll after loader
+        document.body.style.overflow = "auto";
 
         if (mainContent) {
           mainContent.style.opacity = "1";

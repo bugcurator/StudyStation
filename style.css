@@ -1,4 +1,3 @@
-/* Apply a background with a subtle fixed pattern for a parallax effect */
 body::before {
   content: "";
   position: fixed;
@@ -6,7 +5,6 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* (SVG background image data omitted for brevity, assume it's here) */
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
   background-attachment: fixed;
   z-index: -1;
@@ -20,7 +18,7 @@ body::before {
 
 .loader-spinner {
   border: 4px solid rgba(255, 255, 255, 0.2);
-  border-left-color: #d4af37; /* brand-gold */
+  border-left-color: #d4af37;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -67,7 +65,7 @@ body::before {
 
 /* ========== COMPONENT & BUTTON STYLES ========== */
 .course-card {
-  background-color: #1e1e1e; /* brand-card */
+  background-color: #1e1e1e;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   display: flex;
@@ -112,11 +110,11 @@ body::before {
 
 /* Style for Navigation Links */
 .nav-link {
-  color: rgba(224, 224, 224, 0.8); /* brand-text/80 */
+  color: rgba(224, 224, 224, 0.8);
   transition: color 0.2s;
 }
 .nav-link:hover {
-  color: #d4af37; /* brand-gold */
+  color: #d4af37;
 }
 
 /* Mobile Navigation Link Styles */
@@ -129,12 +127,12 @@ body::before {
   padding: 0.5rem 0;
 }
 .mobile-nav-link:hover {
-  color: #d4af37; /* brand-gold */
+  color: #d4af37;
 }
 
 /* Resource Card Styling */
 .resource-card {
-  background-color: #1e1e1e; /* brand-card */
+  background-color: #1e1e1e;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   display: flex;
@@ -147,15 +145,14 @@ body::before {
 .resource-card:hover {
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
-  border-color: rgba(212, 175, 55, 0.5); /* brand-gold border on hover */
+  border-color: rgba(212, 175, 55, 0.5);
 }
 
 /* Global Styles for Mobile Menu State */
 .menu-open {
-  overflow: hidden; /* Prevents background scrolling */
+  overflow: hidden;
 }
 
-/* NEW: Content does not move right; the menu overlays it */
 #page-wrapper.menu-open {
   transform: none;
 }
