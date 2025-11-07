@@ -156,3 +156,6 @@ body::before {
 #page-wrapper.menu-open {
   transform: none;
 }
+.dev a:hover {
+  text-decoration: underline;
+}
